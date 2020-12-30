@@ -9,13 +9,6 @@ This project uses:
 - [tailwindcss](https://tailwindcss.com/), makes HTML look nice
 - [webpack](https://webpack.js.org/), for packing JS and CSS into single files, with minimization enabled, setup to extract CSS to a seperate file 
 - [Air](https://github.com/cosmtrek/air), for hot reloading Go code and templates on change.
-- some `npm run` commands
-
-- [Echo](https://echo.labstack.com/), a web framework for Go
-- [Turbo](https://turbo.hotwire.dev/), brings in the speed of a single-page web application without writing any JavaScript
-- [tailwindcss](https://tailwindcss.com/), makes things look nice, complete setup with purging of unused css, postcss and autoprefixer
-- [webpack](https://webpack.js.org/), for packing JS and CSS into single files, with minimization enabled, setup to extract CSS to a seperate file 
-- [Air](https://github.com/cosmtrek/air), for hot reloading Go code and templates on change.
 
 ## Setup
 You need to have [go](https://golang.org/dl/) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed.
@@ -28,10 +21,10 @@ npm install
 npm run dev
 ```
 
-After all of this just run `air`, to start the webapp with hot reloading.
+After the above just run `air`, to start the webapp with hot reloading.
 
-**Note:** The `dist/main.css` file is rather large now at ~6MB, but don't worry this is only because each possible class of tailwind is included (there a many), once you build for production only ~4KB of CSS is left.
+**Note:** The generated `dist/main.css` file is rather large now at ~6MB, but don't worry this is only because every possible class of tailwind is included (there a many), once you build for production only ~4KB of CSS is left.
 
-If you want to also rebuild the JS and CSS on change run `npm run watch` in a seperate terminal session.
+If you want to also rebuild the JS and CSS on change run `npm run watch` in a separate terminal session.
 
 To build for production run `npm run prod` and `go build`.

@@ -10,15 +10,15 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-type Template struct {
+type templates struct {
 	*template.Template
 }
 
-func (t Template) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+func (t templates) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
 	return t.ExecuteTemplate(w, name, data)
 }
 
-func initTemplate() Template {
+func initTemplates() templates {
 	t := template.New("")
 	t.Funcs(template.FuncMap{
 		"toString": toString,
@@ -35,14 +35,14 @@ func initTemplate() Template {
 		log.Fatal(err)
 	}
 
-	return Template{t}
+	return templates{t}
 }
 
 func main() {
 	e := echo.New()
 
 	e.Debug = true // TODO: this line should be removed in production
-	e.Renderer = initTemplate()
+	e.Renderer = initTemplates()
 	e.Use(middleware.Gzip(), middleware.Secure())
 	// you should also add middleware.CSRF(), once you have forms
 
