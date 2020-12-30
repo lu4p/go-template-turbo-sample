@@ -28,9 +28,14 @@ func initTemplates() templates {
 		},
 	})
 
-	template.ParseGlob("templates/**.html")
+	// parse all html files in the templates directory
+	t, err := t.ParseGlob("templates/*.html")
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	t, err := t.ParseGlob("templates/**.html")
+	// also parse files in subdirectories of templates
+	t, err = t.ParseGlob("templates/*/*.html")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -48,6 +53,7 @@ func main() {
 
 	e.GET("/", root)
 	e.GET("/foo", foo)
+	e.GET("/bar", bar)
 	e.Static("/dist", "./dist")
 	e.Start(":3000")
 }
@@ -63,6 +69,12 @@ func root(c echo.Context) error {
 func foo(c echo.Context) error {
 	return c.Render(200, "foo.html", map[string]interface{}{
 		"title": "Foo",
+	})
+}
+
+func bar(c echo.Context) error {
+	return c.Render(200, "bar.html", map[string]interface{}{
+		"title": "Bar",
 	})
 }
 
