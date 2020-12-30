@@ -13,6 +13,7 @@ This project uses:
 ## Setup
 You need to have [go](https://golang.org/dl/) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed.
 
+Then run:
 ```sh
 go get -u github.com/cosmtrek/air
 git clone https://github.com/lu4p/go-template-turbo-sample.git
