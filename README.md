@@ -1,4 +1,4 @@
-# go-templates-turbo-sample
+# go-template-turbo-sample
 This is a sample project to show how to use Go (templates) with Turbo.
 
 This project uses:
