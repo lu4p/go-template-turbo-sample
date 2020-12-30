@@ -1,4 +1,4 @@
-module github.com/lu4p/templates-turbo-sample
+module github.com/lu4p/go-template-turbo-sample
 
 go 1.15
 

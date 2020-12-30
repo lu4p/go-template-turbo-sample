@@ -28,9 +28,9 @@ npm install
 npm run dev
 ```
 
-After all of this just run `air`, to start the webapp and enable hot reload.
+After all of this just run `air`, to start the webapp with hot reloading.
 
-The `dist/main.css` file is rather large now at ~6MB, but don't worry this is only becasue each possible class of tailwind is included (there a many), once you build for production only ~4KB of CSS is left.
+**Note:** The `dist/main.css` file is rather large now at ~6MB, but don't worry this is only because each possible class of tailwind is included (there a many), once you build for production only ~4KB of CSS is left.
 
 If you want to also rebuild the JS and CSS on change run `npm run watch` in a seperate terminal session.
 
