@@ -3,7 +3,7 @@ This is a sample project to show how to use Go (templates) with Turbo.
 
 This project uses:
 - [Go](https://golang.org/), a programming language that makes it easy to build simple, reliable, and efficient software.
-- [html/template], a html templating library included in the stdlib of Go
+- [html/template](https://pkg.go.dev/html/template), a html templating library included in the stdlib of Go
 - [Echo](https://echo.labstack.com/), a Go web framework
 - [Turbo](https://turbo.hotwire.dev/), part of [Hotwire](https://hotwire.dev/) a new approach from Basecamp for writing modern web applications without much JavaScript
 - [tailwindcss](https://tailwindcss.com/), makes HTML look nice
