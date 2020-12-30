@@ -22,7 +22,7 @@ You need to have [go](https://golang.org/dl/) and [npm](https://docs.npmjs.com/d
 
 ```sh
 go get -u github.com/cosmtrek/air
-git clone https://github.com/lu4p/go-templates-turbo-sample.git
+git clone https://github.com/lu4p/go-template-turbo-sample.git
 cd templates-turbo-sample
 npm install
 npm run dev
