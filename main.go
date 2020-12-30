@@ -44,6 +44,7 @@ func main() {
 	e.Debug = true // TODO: this line should be removed in production
 	e.Renderer = initTemplate()
 	e.Use(middleware.Gzip(), middleware.Secure())
+	// you should also add middleware.CSRF(), once you have forms
 
 	e.GET("/", root)
 	e.GET("/foo", foo)
